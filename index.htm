@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
     <title></title>
     </style>
 </head>
+
 <body>
-<!--  -->
-<div id="test" style="background-color: red;">
-  video
-  <embed id='embed1' type='application/x-wechat-component' embed-type='video' embed-id='1' style='width:100%; height:150px;'>
+    <!--  -->
+    <div id="test" style="background-color: red;">
+        video
+        <embed id='embed1' type='application/x-wechat-component' embed-type='video' embed-id='1' style='width:100%; height:150px;'>
 
-</div>
+    </div>
 
-<button id="button" onclick="my_click()" >TTTT</button>
+    <button id="button" onclick="my_click()">TTTT</button>
 
 
-<script>
-    //var map = document.getElementById("map");
-    //window.MapJsApi.onMapSizeChanged(map.clientWidth * window.devicePixelRatio,map.clientHeight * window.devicePixelRatio);
+    <script>
+        //var map = document.getElementById("map");
+        //window.MapJsApi.onMapSizeChanged(map.clientWidth * window.devicePixelRatio,map.clientHeight * window.devicePixelRatio);
 
-    // var canvas = document.getElementById("canvas");
-    // window.CanvasJsApi.onJsonMessage(canvas.getAttribute("json-message"));
+        // var canvas = document.getElementById("canvas");
+        // window.CanvasJsApi.onJsonMessage(canvas.getAttribute("json-message"));
 
-    
 
-    function my_click(){
-      var t = document.getElementById("test");
-      t.webkitRequestFullscreen();
-    }
-    
-</script>
+
+        function my_click() {
+            var t = document.getElementById("test");
+            t.webkitRequestFullscreen();
+        }
+
+        function change1() {
+            console.log("webkitfullscreenchange");
+        }
+
+        function change2() {
+            console.log("fullscreenchange");
+        }
+
+        document.addEventListener("webkitfullscreenchange", change1);
+        document.addEventListener("fullscreenchange", change2);
+    </script>
 </body>
+
 </html>
