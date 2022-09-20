@@ -28,7 +28,6 @@
     <br> <h1>test</h1>
     <br>
     
-    <a  href="https://kelsenliu.github.io/" target="_blank">new window</a>
 
 
     <script>
@@ -39,6 +38,23 @@
         }
 
         console.log("test");
+        
+        var port;
+
+xwebConnect = function(event) {
+    port = event.ports[0];
+    console.log('on connect');
+    console.log(event);
+
+    port.onmessage = function(e) {
+      console.log('onmessage :' , new Date().getTime());
+      console.log(e);
+    }
+
+    port.postMessage('tag test');
+}
+
+document.addEventListener('xwebConnect', xwebConnect);
 
     </script>
 </body>
