@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
     <title></title>
     </style>
-    <script src="test.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,48 +19,14 @@
     <!-- <div id="test" style="background-color: red;">
         <embed id='embed1' type='application/x-wechat-component' embed-type='video' embed-id='1' style='width:100%; height:150px;'>
     </div> -->
-   
-    
-
-    <button id="button" onclick="my_click()">Button</button>
 
 
-    <br> <h1>test</h1>
-    
-    <iframe src="/test.html">
-  <p>您的浏览器不支持  iframe 标签。</p>
-     </iframe>
-    
-    
-    <br>
-    
+
+    <!-- <button id="button" onclick="my_click()">Button</button> -->
+    <img style="height: 41px; width: 41px;"
+        src="https://xcxcdn.yangkeduo.com/wxapp/admin_gateway/upload/common/oms/index/2nBqjzCX0m_Pmy6cgTtV5TKY_1596961963101.png?imageView2/2/q/50/w/126/format/webp">
 
 
-    <script>
-
-
-        function my_click() {
-            console.log("click");
-        }
-
-        console.log("test");
-        
-        var port;
-
-xwebConnect = function(event) {
-    port = event.ports[0];
-    console.log('on connect');
-    console.log(event);
-
-    port.onmessage = function(e) {
-      console.log('onmessage :' , new Date().getTime());
-      console.log(e);
-    }
-
-    port.postMessage('tag test');
-}
-
-document.addEventListener('xwebConnect', xwebConnect);
 
     </script>
 </body>
