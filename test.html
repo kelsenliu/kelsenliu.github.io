@@ -11,15 +11,15 @@
     <h2 style="background-color:DodgerBlue;">test demo</h2>
 
     <div style="position:absolute;left:100px;top:200px; color: red"> 我是弹幕 我是弹幕 我是弹幕 </DIV>
-    <xweblayer id="xweb" height="500" width="900"></xweblayer>
+    <xweblayer id="layer_1" height="500" width="900"></xweblayer>
     <div style="position:absolute;left:200px;top:300px;color: blue"> 我是弹幕 我是弹幕 我是弹幕 </DIV>
 
 
     <h2 style="background-color:Tomato;">test demo</h2>
 
     <script>
-        const xweb = document.getElementById("xweb");
-        xweb.start();
+        const layer_1 = document.getElementById("layer_1");
+        layer_1.postMessage('insertLivePlayer', '{"livePlayerId":111}');
     </script>
 </body>
 
