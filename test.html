@@ -20,6 +20,10 @@
     <script>
         const layer_1 = document.getElementById("layer_1");
         layer_1.postMessage('insertLivePlayer', '{"livePlayerId":111}');
+
+        layer_1.addEventListener('onMessage', (event) => {
+            console.log('onMessage', event);
+        });
     </script>
 </body>
 
